@@ -1,4 +1,4 @@
-name: Jean's first Job for Orexe :3
+name: Jean's first Job :3
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
 on:
