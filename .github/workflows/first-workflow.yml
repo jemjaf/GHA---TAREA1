@@ -38,11 +38,11 @@ jobs:
        NAME: Manuel
        LAST_NAME: Sánchez
       run:
-      echo "Hola $NAME $LAST_NAME (env step variable override to env job variable)"
+       echo "Hola $NAME $LAST_NAME (env step variable override to env job variable)"
 
     - name: second step of the first job
       run:
-      echo "Hola $NAME $LAST_NAME (env job variable override to env workflow variable)"
+       echo "Hola $NAME $LAST_NAME (env job variable override to env workflow variable)"
 
   second:
    name: Second Job - No overwrite
@@ -54,4 +54,4 @@ jobs:
     - uses: actions/checkout@v3
     - name: first step of the second job
       run:
-      echo "Hola $NAME $LAST_NAME (no overwrite)"
+       echo "Hola $NAME $LAST_NAME (no overwrite)"
