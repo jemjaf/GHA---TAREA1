@@ -4,7 +4,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
  push:
     branches:
-      - main
+      - master
 
 #About env varibles:
 # When more than one environment variable is defined with the same name, GitHub uses the most specific environment variable.
