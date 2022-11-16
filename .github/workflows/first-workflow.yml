@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Jean's first Job for Orexe :3
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
 on:
@@ -33,16 +33,16 @@ jobs:
 
    steps:
     - uses: actions/checkout@v3
-    - name: first step of the first job
+    - name: env step variable override to env job variable
       env:
        NAME: Manuel
        LAST_NAME: Sánchez
       run: |
-       echo "Hola $NAME $LAST_NAME (env step variable override to env job variable)"
+       echo "Hello $NAME $LAST_NAME"
 
-    - name: second step of the first job
+    - name: env job variable override to env workflow variable
       run: |
-       echo "Hola $NAME $LAST_NAME (env job variable override to env workflow variable)"
+       echo "Hello $NAME $LAST_NAME"
 
   second:
    name: Second Job - No overwrite
@@ -52,6 +52,6 @@ jobs:
 
    steps:
     - uses: actions/checkout@v3
-    - name: first step of the second job
+    - name: no overwrite
       run: |
-       echo "Hola $NAME $LAST_NAME (no overwrite)"
+       echo "Hello $NAME $LAST_NAME"
